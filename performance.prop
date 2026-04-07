@@ -1,0 +1,39 @@
+# Performance Properties for Gaming Optimization
+# This file contains system properties that can be added to /system/build.prop or applied via a module/script.
+
+# GPU & 2D Rendering Optimization
+debug.egl.hw=1
+debug.sf.hw=1
+persist.sys.ui.hw=1
+debug.performance.tuning=1
+hwui.render_dirty_regions=false
+persist.sys.use_dithering=0
+
+# Touch & Scrolling Responsiveness
+windowsmgr.max_events_per_sec=300
+view.scroll_friction=0
+persist.sys.scrolling.friction=0
+ro.max.fling_velocity=12000
+ro.min.fling_velocity=8000
+
+# Memory & Dalvik VM Optimization
+dalvik.vm.heapsize=512m
+dalvik.vm.heapstartsize=16m
+dalvik.vm.heapgrowthlimit=256m
+persist.sys.purgeable_assets=1
+pm.dexopt.shared-apk=speed
+pm.dexopt.base-apk=speed
+
+# Hardware UI Cache Sizes
+ro.hwui.texture_cache_size=72
+ro.hwui.layer_cache_size=48
+ro.hwui.r_buffer_cache_size=8
+ro.hwui.path_cache_size=32
+ro.hwui.drop_shadow_cache_size=6
+
+# Network Buffers for WiFi Lag Reduction
+net.tcp.buffersize.wifi=4096,87380,256960,4096,16384,256960
+
+# Reduce Debugging Logs for Better Speed
+persist.service.lgff.enable=0
+persist.service.main_log.enable=0
